@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/Icon">
+        <file alias="mainWndICON">res/ICON/DNX.ico</file>
+    </qresource>
+</RCC>
