@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     logindialog.cpp \
     syssettingdlg.cpp \
     tabmenucontrol.cpp \
-    dataquerydlg.cpp
+    dataquerydlg.cpp \
+    Frame/framelesswindow.cpp
 
 HEADERS  += mainwindow.h \
     imagebutton.h \
@@ -27,7 +28,8 @@ HEADERS  += mainwindow.h \
     logindialog.h \
     syssettingdlg.h \
     tabmenucontrol.h \
-    dataquerydlg.h
+    dataquerydlg.h \
+    Frame/framelesswindow.h
 
 FORMS    += mainwindow.ui \
     testdialog.ui \
@@ -37,4 +39,7 @@ FORMS    += mainwindow.ui \
 
 RESOURCES += \
     resource.qrc
+
+OBJECTIVE_SOURCES += \
+    Frame/framelesswindow.mm
 

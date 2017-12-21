@@ -3,14 +3,19 @@
 #include "syssettingdlg.h"
 #include "testdialog.h"
 
+#include <QLabel>
+
 MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
+    CFramelessWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setWindowFlags(Qt::FramelessWindowHint);//无边框
-    m_sysSetting = NULL;
-    m_TestDlg = NULL;
+
+
+
+//    setWindowFlags(Qt::FramelessWindowHint);//无边框
+    setResizeableAreaWidth(4);
+    setTitleBar(ui->widgetTitlebar);
     //tab 控件的初始化
     tabInit();
 
@@ -19,15 +24,39 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(ui->btnSysStting, SIGNAL(clicked()),this, SLOT(OnSysSettingClicked()));
 
-
  //   ui->verticalTab->setSpacing(0);     //设置间距
- //   QIcon iconWin("mainWndICON");
- //   iconWin.addFile("/Icon/DNX.ico");
- //   setWindowIcon(iconWin);
-
-
-
 //    setAttribute(Qt::WA_TranslucentBackground);//背景透明
+//在这里增加状态栏
+#if  1
+    QLabel *msgLabel;
+    msgLabel = new QLabel(this);
+    msgLabel->setMinimumSize(msgLabel->sizeHint());
+    msgLabel->setAlignment(Qt::AlignHCenter);
+    statusBar()->addWidget(msgLabel);
+//    statusBar()->setStyleSheet(QString("QStatusBar::item{border:0px}"));//去掉label的边框.
+    msgLabel->setText(tr("牛逼"));
+
+    QLabel *msgLabel2;
+    msgLabel2 = new QLabel(this);
+    msgLabel2->setMinimumSize(msgLabel->sizeHint());
+    msgLabel2->setAlignment(Qt::AlignHCenter);
+    statusBar()->addWidget(msgLabel2);
+//    statusBar()->setStyleSheet(QString("QStatusBar::item{border:0px}"));//去掉label的边框.
+    msgLabel2->setText(tr("牛逼"));
+
+    QLabel *msgLabel3;
+    msgLabel3 = new QLabel(this);
+    msgLabel3->setMinimumSize(msgLabel->sizeHint());
+    msgLabel3->setAlignment(Qt::AlignHCenter);
+    statusBar()->addWidget(msgLabel3);
+//    statusBar()->setStyleSheet(QString("QStatusBar::item{border:0px}"));//去掉label的边框.
+    msgLabel3->setText(tr("牛逼"));
+
+#endif
+
+
+
+
 }
 
 MainWindow::~MainWindow()
@@ -97,10 +126,5 @@ void MainWindow::OnSysSettingClicked()
         bbt = 0;
         break;
     }
-
-
     ui->tabMenu->setCurrentIndex(bbt);
-
-
-
 }

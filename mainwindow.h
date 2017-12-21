@@ -2,13 +2,14 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "Frame/framelesswindow.h"
 class SysSettingDlg;
 class TestDialog;
 namespace Ui {
 class MainWindow;
 }
 
-class MainWindow : public QMainWindow
+class MainWindow : public CFramelessWindow
 {
     Q_OBJECT
 
@@ -18,10 +19,6 @@ public:
 
 private:
     Ui::MainWindow *ui;
-//这里是加入tab的界面
-private:
-    SysSettingDlg *m_sysSetting;
-    TestDialog    *m_TestDlg;
 
 protected:
     void resizeEvent();
