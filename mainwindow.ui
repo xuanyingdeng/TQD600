@@ -32,6 +32,7 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <property name="leftMargin">
+<<<<<<< HEAD
      <number>0</number>
     </property>
     <property name="topMargin">
@@ -376,7 +377,7 @@ background-color:rgb(106, 189, 255);
    <sender>pushButton_10</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>showFullScreen()</slot>
+   <slot>showMaximized()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>837</x>
