@@ -22,6 +22,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
 
+
     connect(ui->btnSysStting, SIGNAL(clicked()),this, SLOT(OnSysSettingClicked()));
 
  //   ui->verticalTab->setSpacing(0);     //设置间距

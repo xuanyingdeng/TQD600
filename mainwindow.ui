@@ -376,7 +376,7 @@ background-color:rgb(106, 189, 255);
    <sender>pushButton_10</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>showFullScreen()</slot>
+   <slot>showMaximized()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>837</x>
@@ -392,7 +392,7 @@ background-color:rgb(106, 189, 255);
    <sender>pushButton_12</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>showMinimized()</slot>
+   <slot>showNormal()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>809</x>
