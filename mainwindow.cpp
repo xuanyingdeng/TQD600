@@ -1,3 +1,4 @@
+#include <QPoint>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "syssettingdlg.h"
@@ -16,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
 //    setWindowFlags(Qt::FramelessWindowHint);//无边框
     setResizeableAreaWidth(4);
     setTitleBar(ui->widgetTitlebar);
+
     //tab 控件的初始化
     tabInit();
 
@@ -24,6 +26,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     connect(ui->btnSysStting, SIGNAL(clicked()),this, SLOT(OnSysSettingClicked()));
+
+    connect(ui->btnWorkTest, SIGNAL(clicked()),this, SLOT(OnWorkTestClicked()));
+    connect(ui->btnDataQuery, SIGNAL(clicked()),this, SLOT(OnDataQueryClicked()));
 
  //   ui->verticalTab->setSpacing(0);     //设置间距
 //    setAttribute(Qt::WA_TranslucentBackground);//背景透明
@@ -74,6 +79,21 @@ void MainWindow::resizeEvent()
           ptab->setGeometry(0, 0, szClient.width(), szClient.height());
 }
 
+void MainWindow::mousePressEvent(QMouseEvent *e)
+{
+
+}
+
+void MainWindow::mouseMoveEvent(QMouseEvent *e)
+{
+
+}
+
+void MainWindow::mouseReleaseEvent(QMouseEvent *e)
+{
+
+}
+
 void MainWindow::tabInit()
 {
 
@@ -103,6 +123,7 @@ void MainWindow::tabMenuInit()
 void MainWindow::tabCurveInit()
 {
      ui->tabCurve->tabBar()->hide();
+
 }
 
 void MainWindow::tabGridInit()
@@ -110,8 +131,14 @@ void MainWindow::tabGridInit()
     ui->tabGrid->tabBar()->hide();
 }
 
+void MainWindow::region(const QPoint &cursorPoint)
+{
+
+}
+
 void MainWindow::OnSysSettingClicked()
 {
+/*
     static int bbt = 0;
     bbt++;
     switch (bbt) {
@@ -127,5 +154,21 @@ void MainWindow::OnSysSettingClicked()
         bbt = 0;
         break;
     }
-    ui->tabMenu->setCurrentIndex(bbt);
+
+    ui->tabMenu->setCurrentIndex(bbt
+*/
+    ui->tabMenu->setCurrentIndex(0);
+
+
+
+}
+
+void MainWindow::OnWorkTestClicked()
+{
+    ui->tabMenu->setCurrentIndex(1);
+}
+
+void MainWindow::OnDataQueryClicked()
+{
+   ui->tabMenu->setCurrentIndex(2);
 }

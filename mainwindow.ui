@@ -68,14 +68,14 @@ background-color:rgb(106, 189, 255);
         </widget>
        </item>
        <item>
-        <widget class="ImageButton" name="pushButton_2">
+        <widget class="ImageButton" name="btnWorkTest">
          <property name="text">
           <string>工作测试</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="ImageButton" name="pushButton_3">
+        <widget class="ImageButton" name="btnDataQuery">
          <property name="text">
           <string>数据查询</string>
          </property>
