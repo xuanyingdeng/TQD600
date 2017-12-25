@@ -26,6 +26,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     connect(ui->btnSysStting, SIGNAL(clicked()),this, SLOT(OnSysSettingClicked()));
+    connect(ui->btnWorkTest, SIGNAL(clicked()),this, SLOT(OnWorkTestClicked()));
+    connect(ui->btnDataQuery, SIGNAL(clicked()),this, SLOT(OnDataQueryClicked()));
 
     connect(ui->btnWorkTest, SIGNAL(clicked()),this, SLOT(OnWorkTestClicked()));
     connect(ui->btnDataQuery, SIGNAL(clicked()),this, SLOT(OnDataQueryClicked()));
@@ -156,6 +158,8 @@ void MainWindow::OnSysSettingClicked()
     }
 
     ui->tabMenu->setCurrentIndex(bbt
+
+    ui->tabMenu->setCurrentIndex(bbt)
 */
     ui->tabMenu->setCurrentIndex(0);
 

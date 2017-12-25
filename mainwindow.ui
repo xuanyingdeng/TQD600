@@ -105,7 +105,12 @@ background-color:rgb(106, 189, 255);
        <item>
         <widget class="ImageButton" name="pushButton_7">
          <property name="text">
-          <string>退出系统</string>
+          <string>退出系统</string>uto-merging mainwindow.cpp
+	  CONFLICT (content): Merge conflict in mainwindow.cpp
+	  Auto-merging DNCHN600.pro.user.3.2-pre1
+	  CONFLICT (content): Merge conflict in DNCHN600.pro.user.3.2-pre1
+	  Automatic merge failed; fix conflicts and then commit the result.
+
          </property>
         </widget>
        </item>
