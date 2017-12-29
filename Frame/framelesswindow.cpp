@@ -11,8 +11,8 @@
 #include <objidl.h> // Fixes error C2504: 'IUnknown' : base class undefined
 #include <gdiplus.h>
 //#include <GdiPlusColor.h>
-#pragma comment (lib,"Dwmapi.lib") // Adds missing library, fixes error LNK2019: unresolved external symbol __imp__DwmExtendFrameIntoClientArea
-#pragma comment (lib,"user32.lib")
+//#pragma comment (lib,"Dwmapi.lib") // Adds missing library, fixes error LNK2019: unresolved external symbol __imp__DwmExtendFrameIntoClientArea
+//#pragma comment (lib,"user32.lib")
 
 CFramelessWindow::CFramelessWindow(QWidget *parent)
     : QMainWindow(parent),
@@ -41,7 +41,7 @@ void CFramelessWindow::initUI()
     //保留一个像素的边框宽度，否则系统不会绘制边框阴影
     //
     //we better left 1 piexl width of border untouch, so OS can draw nice shadow around it
-    const MARGINS shadow = { 1, 1, 1, 1 };
+ //x       const MARGINS shadow = { 1, 1, 1, 1 };
 //x    DwmExtendFrameIntoClientArea(HWND(winId()), &shadow);
 }
 
@@ -175,6 +175,7 @@ bool CFramelessWindow::nativeEvent(const QByteArray &eventType, void *message, l
         }
         return true;
     } //end case WM_NCHITTEST
+
     case WM_GETMINMAXINFO:
     {
         if (::IsZoomed(msg->hwnd)) {
@@ -204,6 +205,7 @@ bool CFramelessWindow::nativeEvent(const QByteArray &eventType, void *message, l
                 m_bJustMaximized = false;
             }
         }
+
         return false;
     }
     default:

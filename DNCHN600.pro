@@ -20,7 +20,8 @@ SOURCES += main.cpp\
     syssettingdlg.cpp \
     tabmenucontrol.cpp \
     dataquerydlg.cpp \
-    Frame/framelesswindow.cpp
+    Frame/framelesswindow.cpp \
+    StatusGrid/cstatusgrid.cpp
 
 HEADERS  += mainwindow.h \
     imagebutton.h \
@@ -29,7 +30,8 @@ HEADERS  += mainwindow.h \
     syssettingdlg.h \
     tabmenucontrol.h \
     dataquerydlg.h \
-    Frame/framelesswindow.h
+    Frame/framelesswindow.h \
+    StatusGrid/cstatusgrid.h
 
 FORMS    += mainwindow.ui \
     testdialog.ui \

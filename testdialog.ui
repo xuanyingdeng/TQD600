@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>79</width>
-    <height>456</height>
+    <width>120</width>
+    <height>484</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>20</x>
      <y>0</y>
      <width>77</width>
      <height>451</height>
@@ -505,7 +505,7 @@
   <customwidget>
    <class>ImageButton</class>
    <extends>QPushButton</extends>
-   <header location="global">imagebutton.h</header>
+   <header>imagebutton.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

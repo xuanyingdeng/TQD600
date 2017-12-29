@@ -6,6 +6,7 @@ SysSettingDlg::SysSettingDlg(QWidget *parent) :
     ui(new Ui::SysSettingDlg)
 {
     ui->setupUi(this);
+
 }
 
 SysSettingDlg::~SysSettingDlg()

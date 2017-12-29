@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>896</width>
-    <height>564</height>
+    <width>775</width>
+    <height>494</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,8 +18,8 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>600</width>
-    <height>400</height>
+    <width>0</width>
+    <height>0</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -41,6 +41,9 @@
      <number>0</number>
     </property>
     <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
      <number>0</number>
     </property>
     <item row="0" column="0">
@@ -105,12 +108,7 @@ background-color:rgb(106, 189, 255);
        <item>
         <widget class="ImageButton" name="pushButton_7">
          <property name="text">
-          <string>退出系统</string>uto-merging mainwindow.cpp
-	  CONFLICT (content): Merge conflict in mainwindow.cpp
-	  Auto-merging DNCHN600.pro.user.3.2-pre1
-	  CONFLICT (content): Merge conflict in DNCHN600.pro.user.3.2-pre1
-	  Automatic merge failed; fix conflicts and then commit the result.
-
+          <string>退出系统</string>
          </property>
         </widget>
        </item>
@@ -143,7 +141,7 @@ background-color:rgb(106, 189, 255);
           <number>26</number>
          </property>
          <item>
-          <widget class="ImageButton" name="pushButton_12">
+          <widget class="ImageButton" name="btnMinimum">
            <property name="minimumSize">
             <size>
              <width>25</width>
@@ -156,13 +154,16 @@ background-color:rgb(106, 189, 255);
              <height>25</height>
             </size>
            </property>
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="ImageButton" name="pushButton_10">
+          <widget class="ImageButton" name="btnMaxMin">
            <property name="minimumSize">
             <size>
              <width>25</width>
@@ -230,12 +231,15 @@ background-color:rgb(106, 189, 255);
       </item>
       <item>
        <widget class="TabMenuControl" name="tabMenu">
+        <property name="focusPolicy">
+         <enum>Qt::TabFocus</enum>
+        </property>
         <property name="whatsThis">
          <string>管理二级菜单的tab控件
 </string>
         </property>
         <property name="tabPosition">
-         <enum>QTabWidget::South</enum>
+         <enum>QTabWidget::North</enum>
         </property>
         <property name="tabShape">
          <enum>QTabWidget::Rounded</enum>
@@ -265,7 +269,7 @@ background-color:rgb(106, 189, 255);
        </widget>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="verticalTab" stretch="7,3">
+       <layout class="QVBoxLayout" name="vLayoutGrid" stretch="7,3">
         <property name="spacing">
          <number>0</number>
         </property>
@@ -297,6 +301,15 @@ background-color:rgb(106, 189, 255);
         </item>
         <item>
          <widget class="QTabWidget" name="tabCurve">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
           <property name="focusPolicy">
            <enum>Qt::TabFocus</enum>
           </property>
@@ -305,6 +318,9 @@ background-color:rgb(106, 189, 255);
           </property>
           <property name="autoFillBackground">
            <bool>false</bool>
+          </property>
+          <property name="tabShape">
+           <enum>QTabWidget::Rounded</enum>
           </property>
           <widget class="QWidget" name="tab_3">
            <attribute name="title">
@@ -335,14 +351,28 @@ background-color:rgb(106, 189, 255);
       </item>
      </layout>
     </item>
+    <item row="2" column="0">
+     <widget class="QWidget" name="statusWidget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#statusWidget{
+background-color:rgb(106, 189, 255);
+}</string>
+      </property>
+     </widget>
+    </item>
    </layout>
-  </widget>
-  <widget class="QStatusBar" name="statusBar">
-   <property name="font">
-    <font>
-     <pointsize>16</pointsize>
-    </font>
-   </property>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
@@ -368,46 +398,17 @@ background-color:rgb(106, 189, 255);
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>875</x>
-     <y>24</y>
+     <x>759</x>
+     <y>43</y>
     </hint>
     <hint type="destinationlabel">
-     <x>876</x>
+     <x>778</x>
      <y>48</y>
     </hint>
    </hints>
   </connection>
-  <connection>
-   <sender>pushButton_10</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>showMaximized()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>837</x>
-     <y>28</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>837</x>
-     <y>49</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_12</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>showNormal()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>809</x>
-     <y>23</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>809</x>
-     <y>53</y>
-    </hint>
-   </hints>
-  </connection>
  </connections>
+ <slots>
+  <slot>showMin()</slot>
+ </slots>
 </ui>
