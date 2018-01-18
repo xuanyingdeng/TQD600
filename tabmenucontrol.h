@@ -13,11 +13,11 @@ public:
 
 private:
     QDialog* m_SelDlg[3];
-/*
-    SysSettingDlg* &m_SysSetDlg;
-    TestDialog*    &m_TestDlg;
-    DataQueryDlg*  &m_DataQueryDly;
-*/
+
+    SysSettingDlg *m_SysSetDlg;
+    TestDialog    *m_TestDlg;
+    DataQueryDlg  *m_DataQueryDly;
+
 public:
     void init();
 

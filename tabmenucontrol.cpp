@@ -4,14 +4,12 @@
 #include "dataquerydlg.h"
 TabMenuControl::TabMenuControl(QWidget *parent):QTabWidget(parent)
 {
-    m_SelDlg[0] = new SysSettingDlg(this);
-    m_SelDlg[1] = new TestDialog(this);
-    m_SelDlg[2] = new DataQueryDlg(this);
-/*
-    m_SysSetDlg = m_SelDlg[0];
-    m_TestDlg = m_SelDlg[1];
-    m_DataQueryDly = m_SelDlg[2];
-*/
+   m_SysSetDlg = new SysSettingDlg(this);
+   m_TestDlg = new TestDialog(this);
+   m_DataQueryDly = new DataQueryDlg(this);
+   m_SelDlg[0] = m_SysSetDlg;
+   m_SelDlg[1] = m_TestDlg;
+   m_SelDlg[2] = m_DataQueryDly;
 }
 
 void TabMenuControl::init()

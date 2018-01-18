@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     tabmenucontrol.cpp \
     dataquerydlg.cpp \
     Frame/framelesswindow.cpp \
-    StatusGrid/cstatusgrid.cpp
+    StatusGrid/cstatusgrid.cpp \
+    Delegate/customdelegate.cpp
 
 HEADERS  += mainwindow.h \
     imagebutton.h \
@@ -31,7 +32,8 @@ HEADERS  += mainwindow.h \
     tabmenucontrol.h \
     dataquerydlg.h \
     Frame/framelesswindow.h \
-    StatusGrid/cstatusgrid.h
+    StatusGrid/cstatusgrid.h \
+    Delegate/customdelegate.h
 
 FORMS    += mainwindow.ui \
     testdialog.ui \
@@ -44,4 +46,6 @@ RESOURCES += \
 
 OBJECTIVE_SOURCES += \
     Frame/framelesswindow.mm
+
+DISTFILES +=
 

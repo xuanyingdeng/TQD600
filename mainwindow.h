@@ -31,7 +31,7 @@ private:
 
 //事件
 protected:
-
+//    bool eventFilter(QObject *watched, QEvent *event);
 
 private:
     void InitFrame();        //初始化框架

@@ -1,3 +1,8 @@
+/**
+ * @brief The DataQueryDlg class
+ * 数据查询二级菜单项
+ *
+ */
 #ifndef DATAQUERYDLG_H
 #define DATAQUERYDLG_H
 

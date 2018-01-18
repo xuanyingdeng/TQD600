@@ -1,3 +1,12 @@
+/**
+ * @brief The SysSettingDlg class
+ * 系统设置二级菜单项
+ *
+ *
+ *
+ *
+ *
+ */
 #ifndef SYSSETTINGDLG_H
 #define SYSSETTINGDLG_H
 

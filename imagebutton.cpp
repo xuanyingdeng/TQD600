@@ -1,37 +1,42 @@
 #include "imagebutton.h"
 
 #include <QMouseEvent>
-
+#include <QObject>
 ImageButton::ImageButton(QWidget *parent):QPushButton(parent)
 {
-        setMouseTracking(true);
-        setFlat(true);
+ //setFixedSize(62,60);
+//        setFlat(true);
+    
 }
 
+ImageButton::ImageButton(QWidget *parent, int cx, int cy, QString &strPath):QPushButton(parent)
+{
+
+}
+/*
 void ImageButton::mouseMoveEvent(QMouseEvent *e)
 {
-    if(e->pos().x() < 10 || e->pos().y() < 10)
-    {
-        setText("tianxia");
-        return ;
-    }
     QPushButton::mouseMoveEvent(e);
-
 }
 
 void ImageButton::mouseReleaseEvent(QMouseEvent *e)
 {
     QPushButton::mouseReleaseEvent(e);
-    setText("nihao");
-}
 
-void ImageButton::focusInEvent(QFocusEvent *e)
+}
+*/
+void ImageButton::enterEvent(QEvent *event)
 {
-
+    setText(tr("niubi"));
+    QPushButton::enterEvent(event);
 }
 
-void ImageButton::focusOutEvent(QFocusEvent *e)
+void ImageButton::leaveEvent(QEvent *event)
 {
-
+    setText(tr("tian"));
+    QPushButton::leaveEvent(event);
 }
+
+
+
 
